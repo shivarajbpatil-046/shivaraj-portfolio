@@ -7,7 +7,7 @@ export const personal = {
   tagline: 'Building intelligent systems using AI, Remote Sensing and Scalable Software.',
   philosophy: 'Focused on building intelligent systems that combine AI, geospatial intelligence, edge computing and scalable software engineering to solve real-world problems at scale.',
   email: 'shivarajbpatil046@gmail.com',
-  linkedin: 'www.linkedin.com/in/shivaraj-b-patil-8b5636249',
+  linkedin: 'https://www.linkedin.com/in/shivaraj-b-patil-8b5636249',
   github: 'https://github.com/shivarajbpatil-046',
   resume: '/resume.pdf',
   resumeFilename: 'Shivaraj_B_Patil_Resume.pdf',
