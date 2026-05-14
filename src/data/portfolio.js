@@ -11,7 +11,7 @@ export const personal = {
   github: 'https://github.com/shivarajbpatil-046',
   resume: '/resume.pdf',
   resumeFilename: 'Shivaraj_B_Patil_Resume.pdf',
-  formspree: 'https://formspree.io/f/mykopqod', // ← replace YOUR_FORM_ID after deployment
+  formspree: 'https://formspree.io/f/xzdoqjzr', // ← replace YOUR_FORM_ID after deployment
 };
 
 export const stats = [
