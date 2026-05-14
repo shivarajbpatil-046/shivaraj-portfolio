@@ -8,6 +8,7 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Projects from './components/sections/Projects';
 import Labs from './components/sections/Labs';
+import Experience from './components/sections/Experience';
 import Stack from './components/sections/Stack';
 import Research from './components/sections/Research';
 import Publications from './components/sections/Publications';
@@ -185,6 +186,7 @@ export default function App() {
             <About />
             <Projects />
             <Labs />
+            <Experience />
             <Stack />
             <Research />
             <Publications />

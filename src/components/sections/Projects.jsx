@@ -1,7 +1,8 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { projects } from '../../data/portfolio';
 import ScrollReveal from '../ui/ScrollReveal';
+import MediaGallery from '../ui/MediaGallery';
 
 // Abstract visual placeholders per project
 const ProjectVisual = ({ id }) => {
@@ -102,46 +103,59 @@ const ProjectVisual = ({ id }) => {
 };
 
 export default function Projects() {
+  const [gallery, setGallery] = useState({ open: false, project: null });
+  const openGallery = (project) => setGallery({ open: true, project });
+  const closeGallery = () => setGallery({ open: false, project: null });
+
   return (
-    <section id="projects" className="section-pad" style={{ background: 'var(--bg-primary)', borderTop: '1px solid var(--border)' }}>
-      <div className="container-xl">
+    <>
+      <section id="projects" className="section-pad" style={{ background: 'var(--bg-primary)', borderTop: '1px solid var(--border)' }}>
+        <div className="container-xl">
 
-        {/* Header */}
-        <ScrollReveal>
-          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '5rem' }}>
-            <div>
-              <span className="label" style={{ display: 'block', marginBottom: '1rem' }}>Featured Projects</span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-head)',
-                  fontWeight: 800,
-                  fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                  letterSpacing: '-0.03em',
-                  lineHeight: 1.1,
-                  color: 'var(--text-primary)',
-                }}
-              >
-                Engineering Case Studies
-              </h2>
+          {/* Header */}
+          <ScrollReveal>
+            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '5rem' }}>
+              <div>
+                <span className="label" style={{ display: 'block', marginBottom: '1rem' }}>Featured Projects</span>
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-head)',
+                    fontWeight: 800,
+                    fontSize: 'clamp(2rem, 5vw, 3.5rem)',
+                    letterSpacing: '-0.03em',
+                    lineHeight: 1.1,
+                    color: 'var(--text-primary)',
+                  }}
+                >
+                  Engineering Case Studies
+                </h2>
+              </div>
+              <p style={{ maxWidth: '320px', fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.7 }}>
+                Selected work across AI research, edge computing and scalable backend systems.
+              </p>
             </div>
-            <p style={{ maxWidth: '320px', fontSize: '0.9rem', color: 'var(--text-muted)', lineHeight: 1.7 }}>
-              Selected work across AI research, edge computing and scalable backend systems.
-            </p>
-          </div>
-        </ScrollReveal>
+          </ScrollReveal>
 
-        {/* Projects */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
-          {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} index={i} />
-          ))}
+          {/* Projects */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0px' }}>
+            {projects.map((project, i) => (
+              <ProjectCard key={project.id} project={project} index={i} onGalleryOpen={openGallery} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <MediaGallery
+        isOpen={gallery.open}
+        onClose={closeGallery}
+        media={gallery.project?.media || []}
+        title={gallery.project?.title}
+      />
+    </>
   );
 }
 
-function ProjectCard({ project, index }) {
+function ProjectCard({ project, index, onGalleryOpen }) {
   const isRight = project.align === 'right';
 
   return (
@@ -158,7 +172,10 @@ function ProjectCard({ project, index }) {
       >
         {/* Visual */}
         <div style={{ order: isRight ? 2 : 1 }}>
-          <div
+          <motion.div
+            whileHover={{ scale: 1.012 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => project.media?.length && onGalleryOpen(project)}
             style={{
               height: '320px',
               borderRadius: '12px',
@@ -166,10 +183,39 @@ function ProjectCard({ project, index }) {
               background: 'var(--surface)',
               border: '1px solid var(--border)',
               position: 'relative',
+              cursor: project.media?.length ? 'pointer' : 'default',
             }}
           >
             <ProjectVisual id={project.id} />
-          </div>
+            {/* Gallery overlay hint */}
+            {project.media?.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  background: 'rgba(0,0,0,0.45)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <span style={{
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.15em',
+                  color: 'var(--accent)',
+                  textTransform: 'uppercase',
+                  border: '1px solid rgba(34,211,238,0.3)',
+                  padding: '0.4rem 0.85rem',
+                  borderRadius: '999px',
+                  background: 'rgba(34,211,238,0.06)',
+                }}>
+                  View Gallery
+                </span>
+              </motion.div>
+            )}
+          </motion.div>
         </div>
 
         {/* Content */}

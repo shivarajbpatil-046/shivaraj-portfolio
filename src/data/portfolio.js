@@ -11,7 +11,7 @@ export const personal = {
   github: 'https://github.com/shivarajbpatil-046',
   resume: '/resume.pdf',
   resumeFilename: 'Shivaraj_B_Patil_Resume.pdf',
-  formspree: 'https://formspree.io/f/xzdoqjzr', // ← replace YOUR_FORM_ID after deployment
+  formspree: 'https://formspree.io/f/xzdoqjzr',
 };
 
 export const stats = [
@@ -34,6 +34,12 @@ export const projects = [
     domain: 'Earth Systems Research',
     accent: 'Environmental Intelligence',
     align: 'left',
+   media: [
+  { type: 'image', src: '/media/projects/mangrove-1.jpg', caption: 'Study area mapping' },
+  { type: 'image', src: '/media/projects/mangrove-2.jpg', caption: 'Dataset preparation' },
+  { type: 'image', src: '/media/projects/mangrove-3.jpg', caption: 'Model training' },
+  { type: 'image', src: '/media/projects/mangrove-4.jpg', caption: 'Final prediction map' },
+],
   },
   {
     id: 'jetbot',
@@ -45,6 +51,9 @@ export const projects = [
     domain: 'Edge Computing & Robotics',
     accent: 'Autonomous Systems',
     align: 'right',
+    media: [
+  { type: 'image', src: '/media/projects/jetbot-1.jpg', caption: 'JetBot collision avoidance system' },
+],
   },
   {
     id: 'taskmanager',
@@ -56,6 +65,10 @@ export const projects = [
     domain: 'Backend Engineering',
     accent: 'Scalable Software',
     align: 'left',
+    media: [
+      { type: 'image', src: '/media/projects/taskmanager-1.jpg', caption: 'Spring Boot microservice architecture diagram' },
+      { type: 'image', src: '/media/projects/taskmanager-2.jpg', caption: 'REST API endpoints — task orchestration and JWT auth flow' },
+    ],
   },
 ];
 
@@ -68,6 +81,16 @@ export const labs = [
     tags: ['Drone Engineering', 'RC Aircraft Systems', 'Control-Line Models', 'Flight Maneuvering', 'Aerodynamics'],
     note: 'Hands-on mechanical and aeronautical engineering exposure in a structured lab environment.',
     align: 'left',
+    media: [
+  { type: 'image', src: '/media/labs/aviation-1.jpg', caption: 'Drone Components' },
+  { type: 'image', src: '/media/labs/aviation-3.jpg', caption: 'Flight MainWing Skeloton Builtup' },
+  { type: 'image', src: '/media/labs/aviation-4.jpg', caption: 'Drone Ground Test' },
+  { type: 'image', src: '/media/labs/aviation-5.jpg', caption: 'Drone maneuvering' },
+
+{ type: 'video', src: '/media/labs/aviation-2.mp4', caption: 'Drone Gps Test Inside a building for correctness of the GPS ' },
+  { type: 'video', src: '/media/labs/aviation-7.mp4', caption: 'Final Day of Flying by the Flight Master which is Automated' },
+  { type: 'video', src: '/media/labs/aviation-6.mp4', caption: 'ControlLine Model aerobatics' },
+],
   },
   {
     id: 'edgeai',
@@ -77,6 +100,11 @@ export const labs = [
     tags: ['Jetson Nano', 'Edge AI', 'Computer Vision', 'AI Bot Development', 'Real-Time Inference', 'Embedded AI'],
     note: 'The JetBot collision avoidance project originated in this lab.',
     align: 'right',
+    media: [
+      { type: 'image', src: '/media/labs/edgeai-1.jpg', caption: 'NVIDIA Jetson Nano Edge AI lab Team' },
+      { type: 'image', src: '/media/labs/edgeai-2.jpg', caption: 'Computer vision model setup and integration with real-time inference testing' },
+      { type: 'image', src: '/media/labs/edgeai-3.jpg', caption: 'AI bot development and embedded systems programming' },
+    ],
   },
   {
     id: 'gis',
@@ -86,6 +114,56 @@ export const labs = [
     tags: ['Remote Sensing', 'Satellite Data Analysis', 'Environmental Monitoring', 'AI Prediction', 'GIS Mapping', 'Conservation Analytics'],
     note: 'The Mangrove Mapping research project was developed in this lab.',
     align: 'left',
+    media: [
+  { type: 'image', src: '/media/labs/gis-1.jpg', caption: 'GIS research workflow' },
+],
+  },
+];
+
+export const experience = [
+  {
+    id: 'ncc',
+    number: '01',
+    title: 'National Cadet Corps\n(Air Wing)',
+    subtitle: 'Leadership · Discipline · Aviation Exposure',
+    description: 'Active participation in leadership, discipline, aviation exposure and environmental initiatives through NCC activities. Built team coordination, discipline and a strong sense of service.',
+    highlights: [
+      'NCC Camps participation — discipline & leadership training',
+      'Beach cleaning & environmental drives',
+      'Aviation outreach & exposure activities',
+    ],
+    align: 'left',
+    accent: 'Service · Leadership',
+    media: [
+  { type: 'image', src: '/media/experience/ncc-1.jpg', caption: 'NCC camp' },
+  { type: 'image', src: '/media/experience/ncc-2.jpg', caption: 'Beach cleaning drive' },
+  { type: 'image', src: '/media/experience/ncc-3.jpg', caption: 'Aviation exposure' },
+  { type: 'image', src: '/media/experience/ncc-4.jpg', caption: 'Team activities' },
+  { type: 'image', src: '/media/experience/ncc-5.jpg', caption: 'Training camp' },
+  { type: 'image', src: '/media/experience/ncc-6.jpg', caption: 'Parade practice' },
+  { type: 'image', src: '/media/experience/ncc-7.jpg', caption: 'Community outreach' },
+],
+  },
+  {
+    id: 'hackathon',
+    number: '02',
+    title: 'Hackathon Organizer\n& Operations Lead',
+    subtitle: 'Event Leadership · Sponsorships · Logistics',
+    description: 'Organized and managed 12-hour and 24-hour hackathons across two years. Led end-to-end event operations from sponsorship acquisition to guest handling and student logistics.',
+    highlights: [
+      'Secured company sponsorships for multi-day hackathons',
+      'Led the organizing committee across two consecutive years',
+      'Managed guest handling and speaker coordination',
+      'Handled student accommodation & end-to-end logistics',
+      'Event operations leadership for 12h and 24h formats',
+    ],
+    align: 'right',
+    accent: 'Coordination · Operations',
+    media: [
+      { type: 'image', src: '/media/experience/hackathon-1.jpg', caption: '24-hour hackathon — event operations and coordination' },
+      { type: 'image', src: '/media/experience/hackathon-2.jpg', caption: 'Organizing committee and sponsor coordination session' },
+      { type: 'image', src: '/media/experience/hackathon-3.jpg', caption: 'Student teams in action at the hackathon venue' },
+    ],
   },
 ];
 
