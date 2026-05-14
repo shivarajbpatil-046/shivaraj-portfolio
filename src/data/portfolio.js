@@ -35,10 +35,10 @@ export const projects = [
     accent: 'Environmental Intelligence',
     align: 'left',
    media: [
-  { type: 'image', src: '/media/projects/mangrove-1.jpg', caption: 'Study area mapping' },
-  { type: 'image', src: '/media/projects/mangrove-2.jpg', caption: 'Dataset preparation' },
-  { type: 'image', src: '/media/projects/mangrove-3.jpg', caption: 'Model training' },
-  { type: 'image', src: '/media/projects/mangrove-4.jpg', caption: 'Final prediction map' },
+  { type: 'image', src: '/media/projects/mangrove-1.jpg', caption: 'Mapping the Future: Mangrove Restoration and Monitoring' },
+  { type: 'image', src: '/media/projects/mangrove-2.jpg', caption: 'Dataset preparation by Leveraging remote sensing and AIML' },
+  { type: 'image', src: '/media/projects/mangrove-3.jpg', caption: ' Utilizing ground-truth field data from the Aghanashini Estuary to calibrate and validate remote sensing models for the "Mapping the Future" initiative.' },
+  { type: 'image', src: '/media/projects/mangrove-4.jpg', caption: 'AI for Earth: Using Machine Learning and Deep Learning (Random Forest, VGG19, RESNET50) to automate mangrove ecosystem mapping across Coastal Karnataka.' },
 ],
   },
   {
@@ -52,7 +52,7 @@ export const projects = [
     accent: 'Autonomous Systems',
     align: 'right',
     media: [
-  { type: 'image', src: '/media/projects/jetbot-1.jpg', caption: 'JetBot collision avoidance system' },
+  { type: 'image', src: '/media/projects/jetbot-1.jpg', caption: 'Scaling Autonomous Systems: From Prototyping to Performance' },
 ],
   },
   {
@@ -66,8 +66,8 @@ export const projects = [
     accent: 'Scalable Software',
     align: 'left',
     media: [
-      { type: 'image', src: '/media/projects/taskmanager-1.jpg', caption: 'Spring Boot microservice architecture diagram' },
-      { type: 'image', src: '/media/projects/taskmanager-2.jpg', caption: 'REST API endpoints — task orchestration and JWT auth flow' },
+      { type: 'image', src: '/media/projects/taskmanager-1.jpg', caption: 'Transforming complex workflows into intuitive, visual roadmaps.' },
+      { type: 'image', src: '/media/projects/taskmanager-2.jpg', caption: 'Streamlining complex e-commerce workflows: A custom-built dashboard designed to manage end-to-end.' },
     ],
   },
 ];
@@ -82,10 +82,10 @@ export const labs = [
     note: 'Hands-on mechanical and aeronautical engineering exposure in a structured lab environment.',
     align: 'left',
     media: [
-  { type: 'image', src: '/media/labs/aviation-1.jpg', caption: 'Drone Components' },
-  { type: 'image', src: '/media/labs/aviation-3.jpg', caption: 'Flight MainWing Skeloton Builtup' },
-  { type: 'image', src: '/media/labs/aviation-4.jpg', caption: 'Drone Ground Test' },
-  { type: 'image', src: '/media/labs/aviation-5.jpg', caption: 'Drone maneuvering' },
+  { type: 'image', src: '/media/labs/aviation-1.jpg', caption: 'System Integration: F405 MK2 Autopilot & GPS Navigation' },
+  { type: 'image', src: '/media/labs/aviation-3.jpg', caption: 'From blueprints to balsa:Flight MainWing Skeloton Builtup' },
+  { type: 'image', src: '/media/labs/aviation-4.jpg', caption: 'Pre-Flight System Validation & Ground Testing' },
+  { type: 'image', src: '/media/labs/aviation-5.jpg', caption: 'Drone Automation and Obstacle avoidance system' },
 
 { type: 'video', src: '/media/labs/aviation-2.mp4', caption: 'Drone Gps Test Inside a building for correctness of the GPS ' },
   { type: 'video', src: '/media/labs/aviation-7.mp4', caption: 'Final Day of Flying by the Flight Master which is Automated' },
@@ -115,7 +115,7 @@ export const labs = [
     note: 'The Mangrove Mapping research project was developed in this lab.',
     align: 'left',
     media: [
-  { type: 'image', src: '/media/labs/gis-1.jpg', caption: 'GIS research workflow' },
+  { type: 'image', src: '/media/labs/gis-1.jpg', caption: 'Collaborating at the intersection of Geospatial Intelligence and Artificial Intelligence. Here with my colleagues and our research head at the GIS Research Centre, where we focus on nurturing new ideas and developing advanced AIML models for real-world applications.' },
 ],
   },
 ];
@@ -135,13 +135,13 @@ export const experience = [
     align: 'left',
     accent: 'Service · Leadership',
     media: [
-  { type: 'image', src: '/media/experience/ncc-1.jpg', caption: 'NCC camp' },
-  { type: 'image', src: '/media/experience/ncc-2.jpg', caption: 'Beach cleaning drive' },
-  { type: 'image', src: '/media/experience/ncc-3.jpg', caption: 'Aviation exposure' },
-  { type: 'image', src: '/media/experience/ncc-4.jpg', caption: 'Team activities' },
-  { type: 'image', src: '/media/experience/ncc-5.jpg', caption: 'Training camp' },
-  { type: 'image', src: '/media/experience/ncc-6.jpg', caption: 'Parade practice' },
-  { type: 'image', src: '/media/experience/ncc-7.jpg', caption: 'Community outreach' },
+  { type: 'image', src: '/media/experience/ncc-1.jpg', caption: 'Living by the core values that define the NCC' },
+  { type: 'image', src: '/media/experience/ncc-2.jpg', caption: 'Taking action for a cleaner tomorrow. Proud to have participated in a beach cleanup drive in Mangaluru, contributing to local environmental sustainability efforts.' },
+  { type: 'image', src: '/media/experience/ncc-3.jpg', caption: 'Precision in every flight. Proud to operate the Pipistrel Virus SW 80, a high-performance carbon-fiber microlight used for advanced pilot training' },
+  { type: 'image', src: '/media/experience/ncc-4.jpg', caption: 'Swept the board: Overall Champions across parade, firing, aeromodeling, culturals, and academics.' },
+  { type: 'image', src: '/media/experience/ncc-5.jpg', caption: 'Aviation is more than flying; it’s the meticulous preparation that happens here on the ground.' },
+  { type: 'image', src: '/media/experience/ncc-6.jpg', caption: 'Standing at the control center where precision meets the skies. Grateful for the invaluable opportunity to witness Air Traffic Control operations up close' },
+  { type: 'image', src: '/media/experience/ncc-7.jpg', caption: 'Honored to be recognized as the Best Cadet during our championship-winning season.' },
 ],
   },
   {
